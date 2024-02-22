@@ -87,6 +87,16 @@ export const typeCast: TypeCast = (field, next) => {
   if (field.type === "TIMESTAMP") {
     return field.string();
   }
+  if (field.type === "DATETIME") {
+    return field.string();
+  }
+  if (field.type === "DATE") {
+    return field.string();
+  }
+  // Experimental
+  if (field.type === "LONGLONG") {
+    return field.string();
+  }
   return next();
 };
 

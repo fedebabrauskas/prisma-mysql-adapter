@@ -103,7 +103,7 @@ class MySqlQueryable<ClientT extends Pool | PoolConnection> implements Queryable
    * marked as unhealthy.
    */
   private async performIO<T extends ResultSetHeader | RowDataPacket[][]>(
-    options: QueryOptions
+    options: QueryOptions,
   ): Promise<Result<QueryResult<T>>> {
     try {
       const [data, fields = []] = await this.client.query<T>(options);
@@ -155,7 +155,7 @@ export class PrismaMySql extends MySqlQueryable<Pool> implements DriverAdapter {
 
   getConnectionInfo(): Result<ConnectionInfo> {
     return ok({
-      schemaName: this.options?.schema ?? this.client.config.database,
+      schemaName: this.options?.schema,
     });
   }
 

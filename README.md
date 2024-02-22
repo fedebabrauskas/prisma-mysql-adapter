@@ -47,7 +47,7 @@ npm install @babrasoft/prisma-mysql-adapter
 Finally, when you instantiate Prisma Client, you need to pass an instance of our driver adapter to the `PrismaClient` constructor:
 
 ```ts
-import { createPool } from "mysql2";
+import { createPool } from "mysql2/promise";
 import { PrismaMySql } from "@babrasoft/prisma-mysql-adapter";
 import { PrismaClient } from "@prisma/client";
 
