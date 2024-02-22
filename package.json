@@ -1,6 +1,6 @@
 {
   "name": "@babrasoft/prisma-mysql-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Prisma driver adapter for MySQL",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
